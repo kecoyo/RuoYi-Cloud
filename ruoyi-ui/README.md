@@ -43,7 +43,7 @@ yarn dev
 com.ruoyi     
 ├── ruoyi-ui              // 前端框架 [8000]
 ├── ruoyi-gateway         // 网关模块 [8080]
-├── ruoyi-auth            // 认证中心 [9200]
+├── ruoyi-auth            // 认证中心 [8200]
 ├── ruoyi-api             // 接口模块
 │       └── ruoyi-api-system                          // 系统接口
 ├── ruoyi-common          // 通用模块
@@ -58,7 +58,7 @@ com.ruoyi
 │       └── ruoyi-system                              // 系统模块 [9201]
 │       └── ruoyi-gen                                 // 代码生成 [9202]
 │       └── ruoyi-job                                 // 定时任务 [9203]
-│       └── ruoyi-file                                // 文件服务 [9300]
+│       └── ruoyi-file                                // 文件服务 [9204]
 ├── ruoyi-visual          // 图形化管理模块
 │       └── ruoyi-visual-monitor                      // 监控中心 [9100]
 ├──pom.xml                // 公共依赖

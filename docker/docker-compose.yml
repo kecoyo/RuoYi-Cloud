@@ -82,7 +82,7 @@ services:
       context: ./ruoyi/auth
       dockerfile: dockerfile
     ports:
-      - "9200:9200"
+      - "8200:8200"
     depends_on:
       - ruoyi-redis
     links:
@@ -128,7 +128,7 @@ services:
       context: ./ruoyi/modules/file
       dockerfile: dockerfile
     ports:
-      - "9300:9300"
+      - "9204:9204"
     volumes:
     - ./ruoyi/uploadPath:/home/ruoyi/uploadPath
   ruoyi-visual-monitor:
