@@ -97,7 +97,7 @@ public class SysMenuController extends BaseController
         {
             return error("新增菜单'" + menu.getMenuName() + "'失败，地址必须以http(s)://开头");
         }
-        menu.setCreateBy(SecurityUtils.getUsername());
+        menu.setCreateBy(SecurityUtils.getUserId());
         return toAjax(menuService.insertMenu(menu));
     }
 
@@ -121,7 +121,7 @@ public class SysMenuController extends BaseController
         {
             return error("修改菜单'" + menu.getMenuName() + "'失败，上级菜单不能选择自己");
         }
-        menu.setUpdateBy(SecurityUtils.getUsername());
+        menu.setUpdateBy(SecurityUtils.getUserId());
         return toAjax(menuService.updateMenu(menu));
     }
 

@@ -159,13 +159,13 @@ public class GenTableServiceImpl implements IGenTableService
     @Transactional(rollbackFor = Exception.class)
     public void importGenTable(List<GenTable> tableList)
     {
-        String operName = SecurityUtils.getUsername();
+        Long operId = SecurityUtils.getUserId();
         try
         {
             for (GenTable table : tableList)
             {
                 String tableName = table.getTableName();
-                GenUtils.initTable(table, operName);
+                GenUtils.initTable(table, operId);
                 int row = genTableMapper.insertGenTable(table);
                 if (row > 0)
                 {

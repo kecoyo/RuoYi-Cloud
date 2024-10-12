@@ -472,14 +472,14 @@ public class SysUserServiceImpl implements ISysUserService
 
     /**
      * 导入用户数据
-     * 
-     * @param userList 用户数据列表
+     *
+     * @param userList        用户数据列表
      * @param isUpdateSupport 是否更新支持，如果已存在，则进行更新数据
-     * @param operName 操作用户
+     * @param operId          操作用户
      * @return 结果
      */
     @Override
-    public String importUser(List<SysUser> userList, Boolean isUpdateSupport, String operName)
+    public String importUser(List<SysUser> userList, Boolean isUpdateSupport, Long operId)
     {
         if (StringUtils.isNull(userList) || userList.size() == 0)
         {
@@ -500,7 +500,7 @@ public class SysUserServiceImpl implements ISysUserService
                 {
                     BeanValidators.validateWithException(validator, user);
                     user.setPassword(SecurityUtils.encryptPassword(password));
-                    user.setCreateBy(operName);
+                    user.setCreateBy(operId);
                     userMapper.insertUser(user);
                     successNum++;
                     successMsg.append("<br/>" + successNum + "、账号 " + user.getUserName() + " 导入成功");
@@ -511,7 +511,7 @@ public class SysUserServiceImpl implements ISysUserService
                     checkUserAllowed(u);
                     checkUserDataScope(u.getUserId());
                     user.setUserId(u.getUserId());
-                    user.setUpdateBy(operName);
+                    user.setUpdateBy(operId);
                     userMapper.updateUser(user);
                     successNum++;
                     successMsg.append("<br/>" + successNum + "、账号 " + user.getUserName() + " 更新成功");
