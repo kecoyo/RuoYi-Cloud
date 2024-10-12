@@ -4,9 +4,9 @@ import com.ruoyi.butler.service.IButlerIconTypeService;
 import org.springframework.stereotype.Service;
 
 /**
- * 业务字段 服务层实现
+ * 图标分类 服务层实现
  *
- * @author ruoyi
+ * @author yangkk
  */
 @Service
 public class ButlerIconTypeServiceImpl implements IButlerIconTypeService {

@@ -1,10 +1,10 @@
 package com.ruoyi.butler.service;
 
 /**
- * 业务字段 服务层
+ * 图标分类 服务层
  *
- * @author ruoyi
+ * @author yangkk
  */
 public interface IButlerIconTypeService {
- 
+
 }

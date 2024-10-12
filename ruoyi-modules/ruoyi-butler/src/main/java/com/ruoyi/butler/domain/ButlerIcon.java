@@ -10,9 +10,9 @@ import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 /**
- * 业务表 butler_icon
+ * 图标表 butler_icon
  * 
- * @author ruoyi
+ * @author yangkk
  */
 public class ButlerIcon extends BaseEntity
 {

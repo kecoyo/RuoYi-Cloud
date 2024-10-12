@@ -1,10 +1,13 @@
 package com.ruoyi.butler.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
+
 /**
- * 业务字段 数据层
+ * 图标管理 数据层
  * 
- * @author ruoyi
+ * @author yangkk
  */
+@Mapper
 public interface ButlerIconMapper
 {
    

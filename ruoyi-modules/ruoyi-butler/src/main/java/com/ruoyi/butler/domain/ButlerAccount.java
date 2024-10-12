@@ -1,19 +1,18 @@
 package com.ruoyi.butler.domain;
 
-import com.ruoyi.common.core.constant.GenConstants;
-import com.ruoyi.common.core.utils.StringUtils;
 import com.ruoyi.common.core.web.domain.BaseEntity;
-import org.apache.commons.lang3.ArrayUtils;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import java.util.List;
 
 /**
- * 业务表 butler_account
+ * 账号表 butler_account
  *
- * @author ruoyi
+ * @author yangkk
  */
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class ButlerAccount extends BaseEntity {
     private static final long serialVersionUID = 1L;
 
@@ -21,6 +20,16 @@ public class ButlerAccount extends BaseEntity {
      * ID
      */
     private Long id;
+
+    /**
+     * userId
+     */
+    private Long userId;
+
+    /**
+     * categoryId
+     */
+    private Long categoryId;
 
     /**
      * 名称
@@ -35,11 +44,6 @@ public class ButlerAccount extends BaseEntity {
     private String icon;
 
     /**
-     * 排序号
-     */
-    private Integer sort;
-
-    /**
      * 属性集
      */
     private String properties;
@@ -49,77 +53,20 @@ public class ButlerAccount extends BaseEntity {
      */
     private String pictures;
 
-    /**
-     * userId
-     */
-    private Long userId;
 
     /**
-     * categoryId
+     * 排序号
      */
-    private Long categoryId;
+    private Integer sort;
 
-    public Long getId() {
-        return id;
-    }
+    /**
+     * 状态
+     */
+    private Integer status;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    /**
+     * 删除状态
+     */
+    private Integer deleted;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public Integer getSort() {
-        return sort;
-    }
-
-    public void setSort(Integer sort) {
-        this.sort = sort;
-    }
-
-    public String getProperties() {
-        return properties;
-    }
-
-    public void setProperties(String properties) {
-        this.properties = properties;
-    }
-
-    public String getPictures() {
-        return pictures;
-    }
-
-    public void setPictures(String pictures) {
-        this.pictures = pictures;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
 }

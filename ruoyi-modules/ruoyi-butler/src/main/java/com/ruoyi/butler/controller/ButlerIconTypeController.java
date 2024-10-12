@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 代码生成 操作处理
+ * 图标分类 操作处理
  *
- * @author ruoyi
+ * @author yangkk
  */
-@RequestMapping("/butler/iconType")
 @RestController
+@RequestMapping("/iconType")
 public class ButlerIconTypeController extends BaseController {
 
 }

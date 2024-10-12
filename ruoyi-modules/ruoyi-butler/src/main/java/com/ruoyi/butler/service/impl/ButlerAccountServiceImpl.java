@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * 业务 服务层实现
+ * 账号 服务层实现
  *
- * @author ruoyi
+ * @author yangkk
  */
 @Service
 public class ButlerAccountServiceImpl implements IButlerAccountService {
@@ -21,7 +21,6 @@ public class ButlerAccountServiceImpl implements IButlerAccountService {
 
     @Autowired
     private ButlerAccountMapper accountMapper;
-
 
     @Override
     public List<ButlerAccount> selectAccountList(ButlerAccount account) {

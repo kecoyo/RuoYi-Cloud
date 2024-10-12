@@ -5,9 +5,9 @@ import com.ruoyi.butler.domain.ButlerAccount;
 import java.util.List;
 
 /**
- * 业务 服务层
+ * 账号 服务层
  *
- * @author ruoyi
+ * @author yangkk
  */
 public interface IButlerAccountService {
 
