@@ -14,7 +14,6 @@ import javax.validation.constraints.NotBlank;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class ButlerAccount extends BaseEntity {
-    private static final long serialVersionUID = 1L;
 
     /**
      * ID
@@ -52,7 +51,6 @@ public class ButlerAccount extends BaseEntity {
      * 图片集
      */
     private String pictures;
-
 
     /**
      * 排序号

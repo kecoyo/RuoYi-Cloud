@@ -56,7 +56,7 @@
       <el-table-column label="排序权重" prop="sort" width="100" />
       <el-table-column label="状态" align="center" width="100">
         <template #default="scope">
-          <el-switch v-model="scope.row.status" :active-value="1" :inactive-value="0"
+          <el-switch v-model="scope.row.status" :active-value="0" :inactive-value="1"
             @change="handleStatusChange(scope.row)"></el-switch>
         </template>
       </el-table-column>
@@ -259,13 +259,13 @@ function handleDelete(row) {
 }
 /** 状态修改  */
 function handleStatusChange(row) {
-  let text = row.status === 1 ? "启用" : "停用";
+  let text = row.status === 0 ? "启用" : "停用";
   proxy.$modal.confirm('确认要"' + text + '""' + row.name + '"分类吗?').then(function () {
     return changeCategoryStatus(row.id, row.status);
   }).then(() => {
     proxy.$modal.msgSuccess(text + "成功");
   }).catch(function () {
-    row.status = row.status === 1 ? 0 : 1;
+    row.status = row.status === 0 ? 1 : 0;
   });
 };
 
